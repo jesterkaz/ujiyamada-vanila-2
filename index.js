@@ -59,7 +59,7 @@ $(function(){
     }
 
 	//スタンプの処理
-	for(var i=0 ; i<9 ; i++){
+	for(var i=0 ; i<=8 ; i++){
 		//今回訪問したぶんのスタンプをアニメーションで表示
 		if(eval('stamp0'+ (i+1) ) == (i+1) && eval('beforestamp0'+ (i+1) ) == -1){ 
 		　　//今回のスタンプが押されている＆前回のスタンプが押されていない場合はアニメーションを表示
@@ -77,7 +77,7 @@ $(function(){
 	}
 
 	var stampall = 0;   //スタンプ集計
-	for(var i=0;i<9;i++){
+	for(var i=0;i<=8;i++){
 		if(eval('stamp0'+(i+1)) == (i+1)){
 			stampall++;
 		}
