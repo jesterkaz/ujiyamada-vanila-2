@@ -1,22 +1,28 @@
-$.cookie.json = true;
-
 $(function(){
 	
 	//Cookieの読み込み
-	var stamp = $.cookie('stamp');
+	var stamp01 = $.cookie('stamp01');
+	var stamp02 = $.cookie('stamp02');
+	var stamp03 = $.cookie('stamp03');
+	var stamp04 = $.cookie('stamp04');
+	var stamp05 = $.cookie('stamp05');
+	var stamp06 = $.cookie('stamp06');
+	var stamp07 = $.cookie('stamp07');
+	var stamp08 = $.cookie('stamp08');
+	var stamp09 = $.cookie('stamp09');
 
 	for(var i = 1; i <= 9; i++){
-		if(eval('stamp0'+ i +'== null')){
-			eval('stamp0'+ i +'= 0')
+		if(eval('stamp0'+i+'== null')){
+			eval('stamp0'+i+'= 0;')
 		}
 	}
 
 	//スタンプの処理
 	for(var i = 1 ; i <= 9 ; i++){
 		//今回訪問したぶんのスタンプをアニメーションで表示
-		if(eval('stamp0'+ i + ' == 1')){ 
+		if(eval('stamp0'+ i == 1)){ 
 		　　//今回のスタンプが押されている＆前回のスタンプが押されていない場合はアニメーションを表示
-			eval('stamp0' + i + ' = 2')	
+			eval('stamp0'+i+' = 2;')	
 			var x = i - 1;    　　　　　　　　　//何故かsetTimeoutの中でiが引き継げなかったのでxに値を避難
 			setTimeout(function(){
 				$('#visit-stamp td:eq('+ x +') span')
