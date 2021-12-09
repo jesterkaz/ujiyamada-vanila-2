@@ -7,8 +7,8 @@ $(function(){
 	//Cookieの読み込み
 	var stamp02 = $.cookie('stamp02');
     //訪問数のカウント
-    if(stamp02 == null || stamp02 == -1){ //最初の訪問
-        stamp02 = 2;
+    if(stamp02 == null || stamp02 == 0){ //最初の訪問
+        stamp02 = 1;
     }
     $.cookie('stamp02', stamp02, {expires: 7});
 });
