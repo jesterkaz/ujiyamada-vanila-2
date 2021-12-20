@@ -81,5 +81,18 @@ $(function(){
 	else{
 		$('#visitnum').text('おめでとうございます、スタンプを集めきりました！');
 	}	
+	//Cookieのリセットクリック時の処理
+	$('#reset').click(function(){
+		$.removeCookie('stamp01');
+		$.removeCookie('stamp02');
+		$.removeCookie('stamp03');
+		$.removeCookie('stamp04');
+		$.removeCookie('stamp05');
+		$.removeCookie('stamp06');
+		$.removeCookie('stamp07');
+		$.removeCookie('stamp08');
+		$.removeCookie('stamp09');
+		alert("Cookieをリセットしました。")
+	});
 	
 });
