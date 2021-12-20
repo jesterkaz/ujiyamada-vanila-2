@@ -71,8 +71,9 @@ $(function(){
 		}
 	}
 
+
 	//スタンプ数の表示
-	if(stampall === 0){
+	if(stampall == 0){
 		$('#visitnum').text('まだスタンプを集めていません。');
 	}
 	else if(stampall < 9){
